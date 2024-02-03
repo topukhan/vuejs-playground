@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive</title>
+</head>
+<body>
+    <h2>Vue</h2>
+        <div id="app">
+            <p>
+                <input type="text" v-model="greeting" />
+            </p>
+
+            <p>{{ greeting }} ({{ greeting.length }})</p>
+        </div>
+
+        <script>
+            let app = {
+                data() {
+                    return {
+                        greeting: "Hello world!",
+                    };
+                },
+
+                mounted() {
+                    setTimeout(() => {
+                        this.greeting = "Hello world changed!";
+                    }, 2000);
+                },
+            };
+
+            Vue.createApp(app).mount("#app");
+        </script>
+</body>
+</html>
