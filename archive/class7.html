@@ -2,17 +2,23 @@
 <html lang="en" class="h-full">
     <head>
         <meta charset="UTF-8" />
-        <title>VUE JS 2.2.2024</title>
+        <title>VUE JS 8.2.2024</title>
         <script src="https://unpkg.com/vue@3"></script>
         <link
             href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
             rel="stylesheet"
         />
     </head>
+    <!-- 
+        assignments are now fully component based like Assignments->AssignmentList->Assignment
+        references are in components folder
+        main focus on template, components and props for each components. 
+        [Note: when import a file make sure to add extension, when set a props in a component
+        must pass it from child components or use default name in props instantiation]
+     -->
     <body>
         <div id="app" class="p-20">
-            <!-- <app-button type="secondary" :processing="true">Button</app-button> -->
-            
+            <app-button type="secondary" :processing="true">Button</app-button>
         </div>
 
         <script type="module">

@@ -1,12 +1,8 @@
-import AppButton from "./AppButton.js"
-
+import Assignments from "./Assignments.js";
 export default {
-    components: {
-        "app-button": AppButton,
-    },
-    data() {
-        return {
-            processing: true,
-        };
-    },
+    components: {Assignments},
+    template: `
+        <assignments></assignments>
+    `,
+    
 };
