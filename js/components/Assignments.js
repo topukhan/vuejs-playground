@@ -10,7 +10,7 @@ export default {
             <assignment-list v-bind:assignments="filters.inProgress" title="In Progress"></assignment-list>
             <assignment-list :assignments="filters.completed" title="Completed"></assignment-list>
 
-            <assignment-create :assignments="assignments"></assignment-create>
+            <assignment-create @add="add"></assignment-create>
             
         </section>
     `,
@@ -38,6 +38,12 @@ export default {
         }
     },
     methods: {
-        
+        add(name) {
+            this.assignments.push({
+                name: name,
+                complete: false, 
+                id: this.assignments.length + 1
+            })
+        }
     }
 };

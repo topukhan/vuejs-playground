@@ -12,16 +12,10 @@ export default {
             newAssignment: [],
         }
     },
-    props: {
-        assignments: Array,
-    },
+    
     methods: {
         add() {
-            this.assignments.push({
-                name: this.newAssignment,
-                complete: false,
-                id: this.Assignments.length + 1
-            });
+            this.$emit('add', this.newAssignment)
             this.newAssignment = '';
         },
     },
