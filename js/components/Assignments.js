@@ -17,10 +17,10 @@ export default {
     data() {
         return {
             assignments: [
-                {name: "3rd Party Api Integration", complete: false, id: 1,},
-                { name: "PHP OOP", complete: false, id: 2 },
-                { name: "Vue JS initial", complete: false, id: 3 },
-                { name: "Blog site WP", complete: false, id: 4 },
+                {name: "3rd Party Api Integration", complete: false, id: 1, tag:'personal'},
+                { name: "PHP OOP", complete: false, id: 2, tag:'personal'},
+                { name: "Vue JS initial", complete: false, id: 3, tag: 'work' },
+                { name: "Blog site WP", complete: false, id: 4, tag: 'personal'},
             ],
             
         };
