@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8" />
+        <title>VUE JS 17.2.2024</title>
+        <script src="https://unpkg.com/vue@3"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <!-- 
+            instead of using 
+            :current-tag = currentTag
+            @change="currentTag = $event"
+            -- we can use v-model in the parent component and in child component we can use @click="$emit('update:modelValue', tag)"
+            to communicate with parent component
+
+            when we use v-model in the parent component then in child component we can get the value by using (default)modelValue a props
+            if you want to use custom property name for v-model then use [v-model:customPropertyName="dataVariable", then in child component
+            you need to set the property name accordingly]
+        
+        -->
+    </head>
+    <body class="bg-gray-900 text-white">
+        <div id="app" class="p-20 max-w-full inline-block">
+        <!-- <app-button type="secondary" :processing="true">Button</app-button> -->
+        
+        </div>
+        
+
+        <script type="module">
+            import App from "./js/components/App.js";
+
+            Vue.createApp(App).mount("#app");
+        </script>
+    </body>
+</html>
