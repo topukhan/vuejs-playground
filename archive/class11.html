@@ -2,12 +2,23 @@
 <html lang="en" class="h-full">
     <head>
         <meta charset="UTF-8" />
-        <title>VUE JS 18.2.2024</title>
+        <title>VUE JS 17.2.2024</title>
         <script src="https://unpkg.com/vue@3"></script>
         <link
             href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
             rel="stylesheet"
         />
+        <!-- 
+            Component Responsibility: separated the tags component. 
+            <assignment-tags 
+                :initial-tags="assignments.map(a => a.tag)"
+                :current-tag = currentTag
+                @change="currentTag = $event"
+            />
+            what is $event here?
+            when you emit an event from a child component using this.$emit('change', someData), the data passed to the event (in this case, someData) is accessible in the parent component through $event
+        
+        -->
     </head>
     <body class="bg-gray-900 text-white">
         <div id="app" class="p-20 max-w-full inline-block">
