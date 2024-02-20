@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8" />
+        <title>VUE JS 20.2.2024</title>
+        <script src="https://unpkg.com/vue@3"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <!-- 
+        (13)  installed json-server package to create a fake api endpoint; in assignments.js components we used created lifecycle hook
+            to fetch the data and store them in the assignments data property so that vue can render it as before.
+
+        (14)    assignment ui change to vertical position; create task form now under in progress list
+                in the assignment list component we used slot so that we can pass the component from assignments.js component
+                like: 
+                <assignment-list>
+                    <assignment-create></assignment-create>
+                </assignment-list>
+
+                by using this we can dynamically handle which component to show or hide in another component
+                # in assignment list title section we added a close button using &times; to close the component/list
+                also to show this dynamically we added a props to assignment list like :
+                    canHide: {type: Boolean, default: false},
+                    and from assignments.js component we passed the property. like :
+                        <assignment-list :assignments="filters.completed" can-hide></assignment-list>
+
+                        so that only this list will have the button that we want to show
+                to close the list via clicking close button we first add can-hide props to show the icon then 
+                we set showCompleted as a data property(in parent, to control this from parent side) and set the value to false
+                then set the div using v-show and 
+                    <assignment-list 
+                        can-toggle 
+                        @toggle="showCompleted = !showCompleted"
+                    ></assignment-list>
+                here @toggle is event name and v-on:toggle we toggle the value of showCompleted and pass it to children to listen it
+                and from children :
+                    <button v-show="canToggle" @click="$emit('toggle')">&times;</button>
+                response back to parent for the toggle event then it toggles the value of the showCompleted. (may be this is 
+                called flags) video shows -> slots and flags to perform this
+        
+        -->
+    </head>
+    <body class="bg-gray-900 text-white">
+        <div id="app" class="p-20 max-w-full inline-block">
+        <!-- <app-button type="secondary" :processing="true">Button</app-button> -->
+        
+        </div>
+        
+
+        <script type="module">
+            import App from "./js/components/App.js";
+
+            Vue.createApp(App).mount("#app");
+        </script>
+    </body>
+</html>
