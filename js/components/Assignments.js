@@ -25,7 +25,39 @@ export default {
     `,
     data() {
         return {
-            assignments: [],
+            assignments: [
+                {
+                    "name": "3rd Party Api Integration",
+                    "complete": false,
+                    "id": 1,
+                    "tag":"personal"
+                }, 
+                {
+                    "name": "PHP OOP",
+                    "complete": false,
+                    "id": 2,
+                    "tag":"personal"
+                },
+                {
+                    "name": "Laravel with MongoDB",
+                    "complete": false,
+                    "id": 3,
+                    "tag":"work"
+                },
+                {
+                    "name": "C++ Problem Solving",
+                    "complete": false,
+                    "id": 4,
+                    "tag":"personal"
+                },
+                {
+                    "name": "Vue.JS Task Tracker",
+                    "complete": true,
+                    "id": 5,
+                    "tag":"personal"
+                }
+            ],
+
             showCompleted: true,
         };
     },
@@ -41,13 +73,13 @@ export default {
             }
         }
     },
-    created() {
-        fetch('http://localhost:3001/assignments')
-            .then(response => response.json())
-            .then(data => {
-                this.assignments = data;
-            })
-    },
+    // created() {
+    //     fetch('http://localhost:3001/assignments')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             this.assignments = data;
+    //         })
+    // },
     methods: {
         add(name) {
             this.assignments.push({
