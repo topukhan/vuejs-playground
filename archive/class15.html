@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8" />
+        <title>VUE JS 20.2.2024</title>
+        <script src="https://unpkg.com/vue@3"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <!-- 
+        Named Slots:
+            creating a component call panel.js 
+            we can use <slot name="title"/> in out components to define slots and from the parent we need to call that like : panel (comp)
+                <panel>
+                    <template v-slot:title >
+                        Hello
+                    </template>
+
+                    Body content
+                </panel>
+
+                ## short hand v-slot is like: 
+                    <template #footer>
+                        footer goes here
+                    </template>
+                
+                ## Conditionally show slots
+                    <h2 v-if="$slots.title" class="font-bold mb-2"> 
+                        <slot name="title"/>
+                    </h2>
+
+        
+        -->
+    </head>
+    <body class="bg-gray-900 text-white">
+        <div id="app" class="p-20 max-w-full inline-block">
+        <!-- <app-button type="secondary" :processing="true">Button</app-button> -->
+        
+        </div>
+        
+
+        <script type="module">
+            import App from "./js/components/App.js";
+
+            Vue.createApp(App).mount("#app");
+        </script>
+    </body>
+</html>

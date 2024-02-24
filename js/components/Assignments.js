@@ -7,7 +7,7 @@ export default {
     },
     template: `
     <h1 class="text-3xl font-bold mb-10">Vue JS Task Tracker</h1>
-        <section class="space-x-6 flex gap-6">
+        <section class="space-x-6 flex">
             <assignment-list v-bind:assignments="filters.inProgress" title="In Progress">
                 <assignment-create @add="add"></assignment-create>
             </assignment-list>
