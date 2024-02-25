@@ -2,12 +2,21 @@
 <html lang="en" class="h-full">
     <head>
         <meta charset="UTF-8" />
-        <title id="title">VUE JS 24.2.2024</title>
+        <title>VUE JS 25.2.2024</title>
         <script src="https://unpkg.com/vue@3"></script>
         <link
             href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
             rel="stylesheet"
         />
+        <!-- 
+        install vue using npm with vite
+            vue router is like web.php route file in laravel 
+            # all the view files stores in the views directory with file name suffix "view like HomeView.vue" : is similar 
+            to views/home.blade.php file in laravel
+
+            .vue is a file that refer to single file component, it contains scripts, respective templates and necessary styles.
+        
+        -->
     </head>
     <body class="bg-gray-900 text-white">
         <div id="app" class="p-20 max-w-full inline-block">
@@ -20,14 +29,6 @@
             import App from "./js/components/App.js";
 
             Vue.createApp(App).mount("#app");
-        </script>
-         <script>
-            var currentDate = new Date();
-    
-            // Format the date as you desire
-            var formattedDate = currentDate.toDateString();
-    
-            document.getElementById('title').innerHTML = "VUE JS - " + formattedDate;
         </script>
     </body>
 </html>
