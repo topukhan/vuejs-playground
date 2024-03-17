@@ -9,7 +9,7 @@ export default {
             <panel>
 
                 Execute comprehensive testing procedures to identify and address any functional or usability issues. Ensure the application meets quality standards before deployment.
-                
+
             </panel>
 
             <panel>
@@ -34,7 +34,7 @@ export default {
 
             <panel theme="light">
                 <template v-slot:title >
-                    UI Design Refinement
+                    UI Design Refinement (Light BG)
                 </template>
 
                     Refine UI elements based on feedback from the design team. Make adjustments to improve user experience and visual appeal.
