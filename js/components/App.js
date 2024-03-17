@@ -8,38 +8,39 @@ export default {
 
             <panel>
 
-                Body content
+                Execute comprehensive testing procedures to identify and address any functional or usability issues. Ensure the application meets quality standards before deployment.
+                
             </panel>
 
             <panel>
                 <template v-slot:title >
-                    Hello
+                    Meeting with Client
                 </template>
 
-                Body content
+                Discuss project requirements and timelines with the client. Address any concerns or questions they may have regarding the project scope.
             </panel>
 
             <panel>
                 <template v-slot:title >
-                    Hello
+                    Code Review
                 </template>
 
-                Body content
+                    Review and provide feedback on recent code updates. Identify any bugs or areas for optimization to ensure code quality and performance.
 
                 <template v-slot:footer >
-                    this is footer
+                    Scheduled for: May 20, 2024
                 </template>
             </panel>
 
             <panel theme="light">
                 <template v-slot:title >
-                    Hello
+                    UI Design Refinement
                 </template>
 
-                Body content
+                    Refine UI elements based on feedback from the design team. Make adjustments to improve user experience and visual appeal.
 
                 <template v-slot:footer >
-                    this is footer
+                    Due by: May 22, 2024
                 </template>
             </panel>
         </div>
